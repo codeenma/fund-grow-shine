@@ -1,6 +1,5 @@
 import { ArrowRight, ArrowLeft } from "lucide-react";
 import { useRef } from "react";
-import { Progress } from "@/components/ui/progress";
 import { Button } from "@/components/ui/button";
 import schoolImg from "@/assets/program-school.jpg";
 import buildImg from "@/assets/program-build.jpg";
