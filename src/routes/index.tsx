@@ -9,6 +9,7 @@ import { Navbar } from "@/components/site/Navbar";
 import { Hero } from "@/components/site/Hero";
 import { ProfileVideo } from "@/components/site/ProfileVideo";
 import { Programs } from "@/components/site/Programs";
+import { Portfolio } from "@/components/site/Portfolio";
 import { Marquee } from "@/components/site/Marquee";
 import { CTA } from "@/components/site/CTA";
 import { Footer } from "@/components/site/Footer";
@@ -17,8 +18,8 @@ export const Route = createFileRoute("/")({
   component: Index,
   head: () => ({
     meta: [
-      { title: "Cahaya Ilmu — Crowdfunding Pendidikan & Fasilitas" },
-      { name: "description", content: "Yayasan crowdfunding pendidikan: bangun ruang kelas, beasiswa, dan fasilitas belajar untuk anak-anak Indonesia." },
+      { title: "RumaQuran — Create Musyrifah Take the Future" },
+      { name: "description", content: "RumaQuran Washilaturrahmah Hidayatullah (RQWH) — crowdfunding pendidikan & fasilitas untuk membangun generasi Qur'ani." },
     ],
   }),
 });
@@ -31,6 +32,7 @@ function Index() {
       <ProfileVideo />
       <Marquee />
       <Programs />
+      <Portfolio />
       <CTA />
       <Footer />
     </main>
