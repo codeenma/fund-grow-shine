@@ -16,10 +16,10 @@ export function ProfileVideo() {
             <Quote className="h-3.5 w-3.5" /> Profil Yayasan
           </span>
           <h2 className="mt-5 text-4xl font-bold leading-tight text-plum-deep md:text-5xl lg:text-6xl">
-            Membangun masa depan, <span className="text-magenta">satu kelas</span> dalam satu waktu.
+            Membangun generasi <span className="text-magenta">Qur'ani</span> di tengah zaman.
           </h2>
           <p className="mt-6 text-base leading-relaxed text-muted-foreground md:text-lg">
-            Sejak 2015, <strong className="text-foreground">Cahaya Ilmu</strong> hadir mendampingi sekolah-sekolah di pelosok yang masih kekurangan ruang kelas, buku, dan tenaga pengajar. Kami percaya bahwa pendidikan yang layak adalah hak setiap anak — bukan kemewahan.
+            <strong className="text-foreground">RumaQuran Washilaturrahmah Hidayatullah (RQWH)</strong> didirikan dalam rangka membangun generasi Qur'ani ditengah suasana keprihatinan atas berbagai kerusakan moral dan akhlak serta berbagai penyimpangan yang terjadi pada generasi muda saat ini.
           </p>
 
           <div className="mt-8 grid grid-cols-2 gap-5">

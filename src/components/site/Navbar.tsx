@@ -1,4 +1,4 @@
-import { Heart, Menu } from "lucide-react";
+import { BookOpen, Menu } from "lucide-react";
 import { useState } from "react";
 import { Button } from "@/components/ui/button";
 
@@ -6,8 +6,9 @@ const links = [
   { label: "Beranda", href: "#beranda" },
   { label: "Tentang", href: "#tentang" },
   { label: "Program", href: "#program" },
+  { label: "Portofolio", href: "#portofolio" },
   { label: "Donasi", href: "#donasi" },
-  { label: "Kontak", href: "#kontak" },
+  { label: "Berita", href: "#kontak" },
 ];
 
 export function Navbar() {
@@ -18,9 +19,9 @@ export function Navbar() {
         <nav className="flex items-center justify-between rounded-full border border-white/15 bg-white/10 px-4 py-2.5 backdrop-blur-xl">
           <a href="#beranda" className="flex items-center gap-2 pl-2">
             <span className="grid h-9 w-9 place-items-center rounded-full" style={{ background: "var(--gradient-warm)" }}>
-              <Heart className="h-4 w-4 text-white" fill="white" />
+              <BookOpen className="h-4 w-4 text-white" />
             </span>
-            <span className="font-display text-lg font-bold text-white">Cahaya<span className="text-gold">Ilmu</span></span>
+            <span className="font-display text-lg font-bold text-white">Ruma<span className="text-gold">Quran</span></span>
           </a>
           <ul className="hidden items-center gap-1 md:flex">
             {links.map((l) => (
