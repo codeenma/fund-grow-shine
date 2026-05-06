@@ -1,6 +1,6 @@
 import { Heart } from "lucide-react";
 
-const items = ["Pendidikan untuk Semua", "Bangun Sekolah", "Beasiswa Yatim", "Insentif Guru", "Air Bersih", "Buku & Al-Quran", "Fasilitas Belajar"];
+const items = ["Create Musyrifah", "Take the Future", "Tahfidz Qur'an", "Bangun RumaQuran", "Wakaf Al-Quran", "Beasiswa Santri", "Generasi Qur'ani"];
 
 export function Marquee() {
   const loop = [...items, ...items];

@@ -19,15 +19,15 @@ export function Hero() {
       <div className="relative z-10 mx-auto flex min-h-screen max-w-7xl flex-col justify-center px-6 pb-20 pt-40">
         <div className="max-w-3xl">
           <span className="inline-flex items-center gap-2 rounded-full border border-gold/40 bg-white/5 px-4 py-1.5 text-xs font-semibold uppercase tracking-widest text-gold backdrop-blur">
-            <Sparkles className="h-3.5 w-3.5" /> Crowdfunding Pendidikan
+            <Sparkles className="h-3.5 w-3.5" /> RumaQuran Washilaturrahmah
           </span>
           <h1 className="mt-6 text-5xl font-extrabold leading-[1.05] text-white md:text-7xl lg:text-8xl">
-            Sebar <span className="italic text-gold">Cahaya</span><br />
-            untuk Setiap <br />
-            <span className="bg-clip-text text-transparent" style={{ backgroundImage: "var(--gradient-warm)" }}>Generasi.</span>
+            Create <span className="italic text-gold">Musyrifah</span><br />
+            Take the <br />
+            <span className="bg-clip-text text-transparent" style={{ backgroundImage: "var(--gradient-warm)" }}>Future.</span>
           </h1>
           <p className="mt-6 max-w-xl text-base text-white/80 md:text-lg">
-            Bersama membangun ruang belajar, melengkapi fasilitas, dan mendampingi para pengajar di pelosok negeri. Setiap rupiah yang kamu titipkan menjadi cahaya di masa depan mereka.
+            Membangun generasi Qur'ani di tengah keprihatinan atas berbagai kerusakan moral dan akhlak generasi muda. Setiap kebaikanmu menjadi cahaya bagi para penghafal Quran.
           </p>
           <div className="mt-8 flex flex-wrap items-center gap-3">
             <Button size="lg" className="rounded-full bg-orange px-7 text-white shadow-[var(--shadow-glow)] hover:bg-orange/90">
