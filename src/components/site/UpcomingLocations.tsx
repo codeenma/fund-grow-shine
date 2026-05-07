@@ -3,16 +3,15 @@ import { MapPin } from "lucide-react";
 const upcoming = [
   {
     no: 1,
-    name: "Pahoman",
-    city: "Bandar Lampung",
-    map: "https://www.google.com/maps/embed/v1/place?key=&q=Pahoman,Bandar+Lampung",
-    img: "https://maps.googleapis.com/maps/api/staticmap?center=Pahoman,Bandar+Lampung&zoom=14&size=400x400&maptype=roadmap",
-  },
-  {
-    no: 2,
     name: "Way Halim",
     city: "Bandar Lampung",
     img: "https://maps.googleapis.com/maps/api/staticmap?center=Way+Halim,Bandar+Lampung&zoom=14&size=400x400&maptype=roadmap",
+  },
+  {
+    no: 2,
+    name: "Seputaran UI",
+    city: "Depok",
+    img: "https://maps.googleapis.com/maps/api/staticmap?center=Universitas+Indonesia,Depok&zoom=15&size=400x400&maptype=roadmap",
   },
   {
     no: 3,
