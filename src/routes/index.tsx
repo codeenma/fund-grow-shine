@@ -11,6 +11,7 @@ import { ProfileVideo } from "@/components/site/ProfileVideo";
 import { Programs } from "@/components/site/Programs";
 import { Portfolio } from "@/components/site/Portfolio";
 import { Locations } from "@/components/site/Locations";
+import { UpcomingLocations } from "@/components/site/UpcomingLocations";
 import { Marquee } from "@/components/site/Marquee";
 import { CTA } from "@/components/site/CTA";
 import { Footer } from "@/components/site/Footer";
@@ -35,6 +36,7 @@ function Index() {
       <Programs />
       <Portfolio />
       <Locations />
+      <UpcomingLocations />
       <CTA />
       <Footer />
     </main>
