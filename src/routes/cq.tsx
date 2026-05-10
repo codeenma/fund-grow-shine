@@ -107,9 +107,8 @@ function CQHero() {
         <img src={hero} alt="RumaQuran" className="h-full w-full object-cover" />
         <div className="absolute inset-0" style={{ background: `linear-gradient(110deg, ${BRAND_DARK}f0 0%, ${BRAND_DARK}cc 40%, ${BRAND}80 100%)` }} />
       </div>
-      {/* lime curve bottom */}
-      <svg className="absolute bottom-0 left-0 right-0 z-[1] w-full" viewBox="0 0 1440 120" preserveAspectRatio="none" style={{ height: 80 }}>
-        <path d="M0,60 C360,120 1080,0 1440,60 L1440,120 L0,120 Z" fill={ACCENT} opacity="0.85" />
+      {/* soft white curve bottom */}
+      <svg className="pointer-events-none absolute bottom-0 left-0 right-0 z-[1] w-full" viewBox="0 0 1440 120" preserveAspectRatio="none" style={{ height: 60 }}>
         <path d="M0,80 C360,140 1080,20 1440,80 L1440,120 L0,120 Z" fill="#fff" />
       </svg>
       <div className="relative z-10 mx-auto grid max-w-7xl items-center gap-10 px-6 pb-32 pt-40 lg:grid-cols-2">
@@ -164,7 +163,7 @@ function CQStats() {
     { v: "Rp 12 M", l: "Dana Tersalurkan", icon: Heart },
   ];
   return (
-    <section className="relative -mt-16 px-6 pb-20">
+    <section className="relative z-20 -mt-16 px-6 pb-20">
       <div className="mx-auto grid max-w-6xl grid-cols-2 gap-4 rounded-3xl bg-white p-6 shadow-2xl md:grid-cols-4 md:gap-6 md:p-10">
         {stats.map((s) => (
           <div key={s.l} className="text-center">
