@@ -406,9 +406,6 @@ function CQDonasi() {
   );
 }
 
-function CQUpdate() {
-}
-
 const LOCATIONS = [
   { img: pf1, name: "RumaQuran Utama", address: "Jl. Nakip 1 Gg Masjid No. 75, Kota Baru, Tanjungkarang Timur, Bandar Lampung" },
   { img: pf2, name: "RumaQuran Kota Baru", address: "Jl. Nasir No. 144, Kota Baru, Tanjungkarang Timur, Bandar Lampung" },
