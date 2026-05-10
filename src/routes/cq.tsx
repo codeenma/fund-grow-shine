@@ -518,6 +518,8 @@ function CQUpcoming() {
   );
 }
   const posts = [
+function CQUpdate() {
+  const posts = [
     { img: pf3, tag: "Berita", t: "Pembukaan RumaQuran cabang Way Halim", d: "10 Mei 2026" },
     { img: pf4, tag: "Kegiatan", t: "Wisuda Musyrifah angkatan ke-7", d: "02 Mei 2026" },
     { img: pf1, tag: "Kajian", t: "Kajian Tafsir Pekanan bersama Ustadz", d: "28 Apr 2026" },
