@@ -1,6 +1,6 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { useState } from "react";
-import { ArrowRight, Play, Search, Menu, X, MapPin, Phone, Instagram, Facebook, Youtube, Music2, BookOpen, GraduationCap, HandHeart, Building2, Users, Heart } from "lucide-react";
+import { ArrowRight, Play, Search, Menu, X, MapPin, Phone, Instagram, Facebook, Youtube, Music2, BookOpen, GraduationCap, HandHeart, Building2, Users, Heart, Compass, Sparkles } from "lucide-react";
 import logo from "@/assets/logo-rumaquran.png";
 import hero from "@/assets/hero-children.jpg";
 import p1 from "@/assets/program-books.jpg";
@@ -11,6 +11,7 @@ import pf1 from "@/assets/portfolio-1.jpg";
 import pf2 from "@/assets/portfolio-2.jpg";
 import pf3 from "@/assets/portfolio-3.jpg";
 import pf4 from "@/assets/portfolio-4.jpg";
+import pf5 from "@/assets/portfolio-5.jpg";
 
 export const Route = createFileRoute("/cq")({
   component: CQPage,
@@ -39,6 +40,8 @@ function CQPage() {
       <CQAbout />
       <CQPrograms />
       <CQPortfolio />
+      <CQLocations />
+      <CQUpcoming />
       <CQKemitraan />
       <CQDonasi />
       <CQUpdate />
@@ -403,6 +406,117 @@ function CQDonasi() {
   );
 }
 
+const LOCATIONS = [
+  { img: pf1, name: "RumaQuran Utama", address: "Jl. Nakip 1 Gg Masjid No. 75, Kota Baru, Tanjungkarang Timur, Bandar Lampung" },
+  { img: pf2, name: "RumaQuran Kota Baru", address: "Jl. Nasir No. 144, Kota Baru, Tanjungkarang Timur, Bandar Lampung" },
+  { img: pf3, name: "RumaQuran Kedaton", address: "Jl. Kalelawar No. 46, Sidodadi, Kec. Kedaton, Bandar Lampung" },
+  { img: pf4, name: "RumaQuran Kemiling", address: "Jl. Amethys 6 No. 32, Bukit Kemiling Permai, Bandar Lampung" },
+  { img: pf5, name: "RumaQuran Pendopo", address: "Jl. Amethys 6 No. 32, Bukit Kemiling Permai, Bandar Lampung" },
+];
+
+function CQLocations() {
+  return (
+    <section id="lokasi" className="px-6 py-20 md:py-28">
+      <div className="mx-auto max-w-7xl">
+        <div className="text-center">
+          <span className="inline-flex items-center gap-2 rounded-full px-4 py-1 text-xs font-bold uppercase tracking-widest" style={{ background: `${BRAND}1a`, color: BRAND_DARK }}>
+            <Compass className="h-3.5 w-3.5" /> Lokasi Kami
+          </span>
+          <h2 className="mt-4 text-4xl font-extrabold leading-tight text-[#430736] md:text-5xl">
+            Lokasi <span style={{ color: BRAND }}>RumaQuran</span>
+          </h2>
+          <p className="mx-auto mt-4 max-w-2xl text-slate-500">
+            Saat ini telah berdiri 5 cabang RumaQuran Washilaturrahmah Hidayatullah di kota Bandar Lampung.
+          </p>
+        </div>
+        <div className="mt-12 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+          {LOCATIONS.map((l, i) => (
+            <article key={l.name} className="group relative overflow-hidden rounded-3xl bg-white shadow-md ring-1 ring-slate-100 transition hover:-translate-y-1 hover:shadow-xl">
+              <div className="relative aspect-[5/3] overflow-hidden">
+                <img src={l.img} alt={l.name} className="h-full w-full object-cover transition duration-700 group-hover:scale-110" />
+                <div className="absolute inset-0 bg-gradient-to-t from-[#430736]/70 via-transparent to-transparent" />
+                <span className="absolute left-4 top-4 grid h-9 w-9 place-items-center rounded-xl text-white shadow-lg" style={{ background: BRAND }}>
+                  <MapPin className="h-4 w-4" />
+                </span>
+                <span className="absolute right-4 top-4 rounded-full bg-white/95 px-3 py-1 text-[10px] font-bold uppercase tracking-widest" style={{ color: BRAND }}>
+                  Cabang #{i + 1}
+                </span>
+              </div>
+              <div className="p-6">
+                <h3 className="text-lg font-extrabold uppercase leading-snug text-[#430736]">{l.name}</h3>
+                <p className="mt-2 text-sm leading-relaxed text-slate-500">{l.address}</p>
+                <a href={`https://maps.google.com/?q=${encodeURIComponent(l.address)}`} target="_blank" rel="noreferrer" className="mt-4 inline-flex items-center gap-2 text-sm font-bold transition hover:gap-3" style={{ color: BRAND }}>
+                  Lihat di Maps <ArrowRight className="h-3.5 w-3.5" />
+                </a>
+              </div>
+            </article>
+          ))}
+        </div>
+      </div>
+    </section>
+  );
+}
+
+const UPCOMING = [
+  { name: "Way Halim", city: "Bandar Lampung", progress: 72, target: 1_500_000_000, raised: 1_080_000_000 },
+  { name: "Seputaran UI", city: "Depok, Jawa Barat", progress: 38, target: 2_000_000_000, raised: 760_000_000 },
+  { name: "Seputaran ITB", city: "Bandung, Jawa Barat", progress: 24, target: 2_500_000_000, raised: 600_000_000 },
+];
+
+function CQUpcoming() {
+  const fmt = (n: number) => "Rp " + (n / 1_000_000).toFixed(0) + " Jt";
+  return (
+    <section id="rencana" className="relative overflow-hidden px-6 py-20 md:py-28" style={{ background: `linear-gradient(180deg, #fff 0%, ${BRAND}08 100%)` }}>
+      <div className="pointer-events-none absolute -left-20 top-10 h-72 w-72 rounded-full opacity-20 blur-3xl" style={{ background: ACCENT }} />
+      <div className="pointer-events-none absolute -right-20 bottom-10 h-72 w-72 rounded-full opacity-20 blur-3xl" style={{ background: BRAND }} />
+      <div className="relative mx-auto max-w-7xl">
+        <div className="text-center">
+          <span className="inline-flex items-center gap-2 rounded-full px-4 py-1 text-xs font-bold uppercase tracking-widest text-white" style={{ background: BRAND }}>
+            <Sparkles className="h-3.5 w-3.5" /> Rencana Pembangunan
+          </span>
+          <h2 className="mt-4 text-4xl font-extrabold leading-tight text-[#430736] md:text-5xl">
+            Cabang <span style={{ color: ACCENT }}>Berikutnya</span>
+          </h2>
+          <p className="mx-auto mt-4 max-w-2xl text-slate-500">
+            Bersama-sama kita wujudkan rumah pembinaan Musyrifah berikutnya. Setiap rupiah yang kamu titipkan jadi bagian dari ikhtiar besar ini.
+          </p>
+        </div>
+        <div className="mt-14 grid gap-6 md:grid-cols-3">
+          {UPCOMING.map((u, i) => (
+            <article key={u.name} className="relative rounded-3xl bg-white p-7 shadow-md ring-1 ring-slate-100 transition hover:-translate-y-1 hover:shadow-xl">
+              <div className="absolute -top-5 left-7 grid h-12 w-12 place-items-center rounded-2xl text-sm font-extrabold text-white shadow-lg" style={{ background: `linear-gradient(135deg, ${BRAND}, ${BRAND_DARK})` }}>
+                0{i + 1}
+              </div>
+              <div className="flex items-center justify-between pt-3">
+                <span className="rounded-full px-3 py-1 text-[10px] font-bold uppercase tracking-widest" style={{ background: `${ACCENT}1a`, color: ACCENT }}>Coming Soon</span>
+                <MapPin className="h-4 w-4 text-slate-300" />
+              </div>
+              <h3 className="mt-4 text-2xl font-extrabold leading-tight text-[#430736]">{u.name}</h3>
+              <p className="text-sm text-slate-500">{u.city}</p>
+              {/* progress ring + numbers */}
+              <div className="mt-6 flex items-center gap-5">
+                <div className="relative h-20 w-20 flex-shrink-0">
+                  <div className="absolute inset-0 rounded-full" style={{ background: `conic-gradient(${BRAND} ${u.progress}%, ${BRAND}1a 0)` }} />
+                  <div className="absolute inset-1.5 grid place-items-center rounded-full bg-white">
+                    <span className="text-base font-extrabold" style={{ color: BRAND }}>{u.progress}%</span>
+                  </div>
+                </div>
+                <div className="flex-1 text-sm">
+                  <div className="text-slate-400">Terkumpul</div>
+                  <div className="font-extrabold text-[#430736]">{fmt(u.raised)}</div>
+                  <div className="mt-1 text-xs text-slate-400">dari target {fmt(u.target)}</div>
+                </div>
+              </div>
+              <a href="#donasi" className="mt-6 inline-flex w-full items-center justify-center gap-2 rounded-full py-3 text-sm font-bold text-white shadow-md transition hover:opacity-90" style={{ background: BRAND }}>
+                Dukung Pembangunan <ArrowRight className="h-4 w-4" />
+              </a>
+            </article>
+          ))}
+        </div>
+      </div>
+    </section>
+  );
+}
 function CQUpdate() {
   const posts = [
     { img: pf3, tag: "Berita", t: "Pembukaan RumaQuran cabang Way Halim", d: "10 Mei 2026" },
