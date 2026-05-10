@@ -1,6 +1,6 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { useState } from "react";
-import { ArrowRight, Play, Search, Menu, X, MapPin, Phone, Instagram, Facebook, Youtube, Music2, BookOpen, GraduationCap, HandHeart, Building2, Users, Heart } from "lucide-react";
+import { ArrowRight, Play, Search, Menu, X, MapPin, Phone, Instagram, Facebook, Youtube, Music2, BookOpen, GraduationCap, HandHeart, Building2, Users, Heart, Compass, Sparkles } from "lucide-react";
 import logo from "@/assets/logo-rumaquran.png";
 import hero from "@/assets/hero-children.jpg";
 import p1 from "@/assets/program-books.jpg";
@@ -11,6 +11,7 @@ import pf1 from "@/assets/portfolio-1.jpg";
 import pf2 from "@/assets/portfolio-2.jpg";
 import pf3 from "@/assets/portfolio-3.jpg";
 import pf4 from "@/assets/portfolio-4.jpg";
+import pf5 from "@/assets/portfolio-5.jpg";
 
 export const Route = createFileRoute("/cq")({
   component: CQPage,
@@ -39,6 +40,8 @@ function CQPage() {
       <CQAbout />
       <CQPrograms />
       <CQPortfolio />
+      <CQLocations />
+      <CQUpcoming />
       <CQKemitraan />
       <CQDonasi />
       <CQUpdate />
