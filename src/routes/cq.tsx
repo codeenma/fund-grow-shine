@@ -517,7 +517,6 @@ function CQUpcoming() {
     </section>
   );
 }
-  const posts = [
 function CQUpdate() {
   const posts = [
     { img: pf3, tag: "Berita", t: "Pembukaan RumaQuran cabang Way Halim", d: "10 Mei 2026" },
