@@ -1,4 +1,5 @@
-import { BookOpen, Facebook, Instagram, Youtube, Music2, MapPin, Phone } from "lucide-react";
+import { Facebook, Instagram, Youtube, Music2, MapPin, Phone } from "lucide-react";
+import logo from "@/assets/logo-rumaquran.png";
 
 export function Footer() {
   return (
@@ -6,8 +7,8 @@ export function Footer() {
       <div className="mx-auto grid max-w-7xl gap-10 px-6 py-16 md:grid-cols-4">
         <div>
           <div className="flex items-center gap-3">
-            <span className="grid h-12 w-12 place-items-center rounded-2xl" style={{ background: "var(--gradient-warm)" }}>
-              <BookOpen className="h-6 w-6 text-white" />
+            <span className="grid h-14 w-14 place-items-center rounded-2xl bg-white p-1.5">
+              <img src={logo} alt="RumaQuran" className="h-full w-full object-contain" />
             </span>
             <div>
               <div className="font-display text-xl font-bold leading-none">Ruma<span className="text-gold">Quran</span></div>

@@ -1,6 +1,7 @@
-import { BookOpen, Menu } from "lucide-react";
+import { Menu } from "lucide-react";
 import { useState } from "react";
 import { Button } from "@/components/ui/button";
+import logo from "@/assets/logo-rumaquran.png";
 
 const links = [
   { label: "Beranda", href: "#beranda" },
@@ -18,8 +19,8 @@ export function Navbar() {
       <div className="mx-auto max-w-7xl px-6 pt-6">
         <nav className="flex items-center justify-between rounded-full border border-white/15 bg-white/10 px-4 py-2.5 backdrop-blur-xl">
           <a href="#beranda" className="flex items-center gap-2 pl-2">
-            <span className="grid h-9 w-9 place-items-center rounded-full" style={{ background: "var(--gradient-warm)" }}>
-              <BookOpen className="h-4 w-4 text-white" />
+            <span className="grid h-10 w-10 place-items-center rounded-full bg-white/95 p-1">
+              <img src={logo} alt="RumaQuran" className="h-full w-full object-contain" />
             </span>
             <span className="font-display text-lg font-bold text-white">Ruma<span className="text-gold">Quran</span></span>
           </a>
