@@ -25,7 +25,6 @@ export const Route = createFileRoute("/cq")({
 const NAV = [
   { label: "Program", href: "#program" },
   { label: "Kajian", href: "#kajian" },
-  { label: "Donasi", href: "#donasi" },
   { label: "Kemitraan", href: "#kemitraan" },
   { label: "Update", href: "#update" },
   { label: "Kontak", href: "#kontak" },
@@ -79,7 +78,7 @@ function CQNav() {
             <Search className="h-4 w-4" />
           </button>
           <a href="#donasi" className="hidden rounded-full border-2 border-white px-6 py-2 text-sm font-semibold text-white transition hover:bg-white hover:text-[var(--brand-dark)] lg:inline-block" style={{ ['--brand-dark' as any]: BRAND_DARK }}>
-            Masuk
+            Donasi
           </a>
           <button onClick={() => setOpen(!open)} className="grid h-10 w-10 place-items-center rounded-lg bg-white/10 text-white lg:hidden" aria-label="Menu">
             {open ? <X className="h-5 w-5" /> : <Menu className="h-5 w-5" />}
