@@ -48,9 +48,11 @@ function CQPage() {
   );
 }
 
-const BRAND = "#0aa6b8"; // teal/cyan accent
-const BRAND_DARK = "#0a3a4a";
-const ACCENT = "#b6d63a"; // lime accent
+// Brand palette harmonized with white surfaces
+const BRAND = "#761a57";        // primary plum
+const BRAND_DARK = "#430736";   // deep plum
+const ACCENT = "#df7224";       // warm orange
+const GOLD = "#f4c200";         // gold highlight
 
 function CQNav() {
   const [open, setOpen] = useState(false);
