@@ -10,11 +10,17 @@
 
 import { Route as rootRouteImport } from './routes/__root'
 import { Route as LightRouteImport } from './routes/light'
+import { Route as CqRouteImport } from './routes/cq'
 import { Route as IndexRouteImport } from './routes/index'
 
 const LightRoute = LightRouteImport.update({
   id: '/light',
   path: '/light',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const CqRoute = CqRouteImport.update({
+  id: '/cq',
+  path: '/cq',
   getParentRoute: () => rootRouteImport,
 } as any)
 const IndexRoute = IndexRouteImport.update({
@@ -25,27 +31,31 @@ const IndexRoute = IndexRouteImport.update({
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
+  '/cq': typeof CqRoute
   '/light': typeof LightRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
+  '/cq': typeof CqRoute
   '/light': typeof LightRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
+  '/cq': typeof CqRoute
   '/light': typeof LightRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
-  fullPaths: '/' | '/light'
+  fullPaths: '/' | '/cq' | '/light'
   fileRoutesByTo: FileRoutesByTo
-  to: '/' | '/light'
-  id: '__root__' | '/' | '/light'
+  to: '/' | '/cq' | '/light'
+  id: '__root__' | '/' | '/cq' | '/light'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
+  CqRoute: typeof CqRoute
   LightRoute: typeof LightRoute
 }
 
@@ -56,6 +66,13 @@ declare module '@tanstack/react-router' {
       path: '/light'
       fullPath: '/light'
       preLoaderRoute: typeof LightRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/cq': {
+      id: '/cq'
+      path: '/cq'
+      fullPath: '/cq'
+      preLoaderRoute: typeof CqRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/': {
@@ -70,8 +87,19 @@ declare module '@tanstack/react-router' {
 
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
+  CqRoute: CqRoute,
   LightRoute: LightRoute,
 }
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)
   ._addFileTypes<FileRouteTypes>()
+
+import type { getRouter } from './router.tsx'
+import type { startInstance } from './start.ts'
+declare module '@tanstack/react-start' {
+  interface Register {
+    ssr: true
+    router: Awaited<ReturnType<typeof getRouter>>
+    config: Awaited<ReturnType<typeof startInstance.getOptions>>
+  }
+}
