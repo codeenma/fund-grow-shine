@@ -33,7 +33,7 @@ const NAV = [
 
 function CQPage() {
   return (
-    <main className="min-h-screen bg-white text-[#0f2540]">
+    <main className="min-h-screen bg-white text-[#430736]">
       <CQNav />
       <CQHero />
       <CQStats />
@@ -90,7 +90,7 @@ function CQNav() {
         <div className="mx-6 rounded-2xl bg-white p-4 shadow-xl lg:hidden">
           <ul className="flex flex-col gap-1">
             {NAV.map((n) => (
-              <li key={n.label}><a onClick={() => setOpen(false)} href={n.href} className="block rounded-lg px-3 py-2 text-sm font-semibold text-[#0f2540] hover:bg-slate-100">{n.label}</a></li>
+              <li key={n.label}><a onClick={() => setOpen(false)} href={n.href} className="block rounded-lg px-3 py-2 text-sm font-semibold text-[#430736] hover:bg-slate-100">{n.label}</a></li>
             ))}
           </ul>
         </div>
@@ -121,7 +121,7 @@ function CQHero() {
             RumaQuran Washilaturrahmah Hidayatullah — wadah membentuk Musyrifah dan menjaga akhlak generasi muda dengan Al-Qur'an.
           </p>
           <div className="mt-8 flex flex-wrap items-center gap-3">
-            <a href="#donasi" className="inline-flex items-center gap-3 rounded-full bg-white px-6 py-3 text-sm font-bold text-[#0a3a4a] shadow-lg transition hover:bg-[#b6d63a] hover:text-[#0a3a4a]">
+            <a href="#donasi" className="inline-flex items-center gap-3 rounded-full bg-white px-6 py-3 text-sm font-bold text-[#430736] shadow-lg transition hover:bg-[#df7224] hover:text-[#430736]">
               Bantu Sekarang <span className="grid h-7 w-7 place-items-center rounded-full" style={{ background: BRAND, color: "#fff" }}><ArrowRight className="h-3.5 w-3.5" /></span>
             </a>
             <a href="#program" className="rounded-full border-2 border-white/60 px-6 py-3 text-sm font-bold text-white transition hover:bg-white/10">
@@ -144,7 +144,7 @@ function CQHero() {
                 <div className="absolute inset-0 bg-black/30" />
                 <button onClick={() => setPlaying(true)} className="absolute inset-0 grid place-items-center" aria-label="Play">
                   <span className="grid h-20 w-20 place-items-center rounded-full bg-white shadow-xl transition hover:scale-110">
-                    <Play className="ml-1 h-7 w-7 fill-[#0aa6b8] text-[#0aa6b8]" />
+                    <Play className="ml-1 h-7 w-7 fill-[#761a57] text-[#761a57]" />
                   </span>
                 </button>
               </>
@@ -171,7 +171,7 @@ function CQStats() {
             <div className="mx-auto grid h-14 w-14 place-items-center rounded-2xl text-white" style={{ background: `linear-gradient(135deg, ${BRAND}, ${BRAND_DARK})` }}>
               <s.icon className="h-6 w-6" />
             </div>
-            <div className="mt-3 text-2xl font-extrabold text-[#0a3a4a] md:text-3xl">{s.v}</div>
+            <div className="mt-3 text-2xl font-extrabold text-[#430736] md:text-3xl">{s.v}</div>
             <div className="text-xs font-medium text-slate-500 md:text-sm">{s.l}</div>
           </div>
         ))}
@@ -198,7 +198,7 @@ function CQAbout() {
           <span className="inline-block rounded-full px-4 py-1 text-xs font-bold uppercase tracking-widest" style={{ background: `${BRAND}1a`, color: BRAND_DARK }}>
             Tentang Kami
           </span>
-          <h2 className="mt-4 text-4xl font-extrabold leading-tight text-[#0a3a4a] md:text-5xl">
+          <h2 className="mt-4 text-4xl font-extrabold leading-tight text-[#430736] md:text-5xl">
             Create <span style={{ color: BRAND }}>Musyrifah</span>, Take the Future.
           </h2>
           <p className="mt-5 text-base leading-relaxed text-slate-600">
@@ -244,11 +244,11 @@ function CQPrograms() {
             <span className="inline-block rounded-full px-4 py-1 text-xs font-bold uppercase tracking-widest text-white" style={{ background: BRAND }}>
               Program Kami
             </span>
-            <h2 className="mt-4 text-4xl font-extrabold leading-tight text-[#0a3a4a] md:text-5xl">
+            <h2 className="mt-4 text-4xl font-extrabold leading-tight text-[#430736] md:text-5xl">
               Kebaikan yang <span style={{ color: BRAND }}>berkelanjutan</span>.
             </h2>
           </div>
-          <a href="#" className="hidden text-sm font-bold text-[#0a3a4a] hover:text-[#0aa6b8] md:block">Lihat Semua →</a>
+          <a href="#" className="hidden text-sm font-bold text-[#430736] hover:text-[#761a57] md:block">Lihat Semua →</a>
         </div>
         <div className="mt-10 grid gap-6 md:grid-cols-2 lg:grid-cols-4">
           {programs.map((p) => {
@@ -262,7 +262,7 @@ function CQPrograms() {
                   </span>
                 </div>
                 <div className="p-5">
-                  <h3 className="font-bold text-[#0a3a4a]">{p.title}</h3>
+                  <h3 className="font-bold text-[#430736]">{p.title}</h3>
                   <p className="mt-1 line-clamp-2 text-sm text-slate-500">{p.desc}</p>
                   <div className="mt-4">
                     <div className="h-2 w-full overflow-hidden rounded-full bg-slate-100">
@@ -300,13 +300,13 @@ function CQPortfolio() {
           <span className="inline-block rounded-full px-4 py-1 text-xs font-bold uppercase tracking-widest" style={{ background: `${BRAND}1a`, color: BRAND_DARK }}>
             Update & Kajian
           </span>
-          <h2 className="mt-4 text-4xl font-extrabold text-[#0a3a4a] md:text-5xl">Kabar Lapangan Terbaru</h2>
+          <h2 className="mt-4 text-4xl font-extrabold text-[#430736] md:text-5xl">Kabar Lapangan Terbaru</h2>
         </div>
         <div className="mt-12 grid gap-6 md:grid-cols-2 lg:grid-cols-4">
           {items.map((it, i) => (
             <article key={i} className="group relative aspect-[3/4] overflow-hidden rounded-3xl shadow-md">
               <img src={it.img} alt={it.t} className="h-full w-full object-cover transition duration-700 group-hover:scale-110" />
-              <div className="absolute inset-0 bg-gradient-to-t from-[#0a3a4a]/95 via-[#0a3a4a]/30 to-transparent" />
+              <div className="absolute inset-0 bg-gradient-to-t from-[#430736]/95 via-[#430736]/30 to-transparent" />
               <div className="absolute inset-x-0 bottom-0 p-5 text-white">
                 <div className="text-[10px] font-bold uppercase tracking-widest" style={{ color: ACCENT }}>Kegiatan</div>
                 <div className="mt-1 font-bold leading-snug">{it.t}</div>
@@ -356,7 +356,7 @@ function CQDonasi() {
           <span className="inline-block rounded-full px-4 py-1 text-xs font-bold uppercase tracking-widest text-white" style={{ background: ACCENT, color: BRAND_DARK }}>
             Donasi
           </span>
-          <h2 className="mt-4 text-4xl font-extrabold leading-tight text-[#0a3a4a] md:text-5xl">
+          <h2 className="mt-4 text-4xl font-extrabold leading-tight text-[#430736] md:text-5xl">
             Kebaikanmu hari ini, <span style={{ color: BRAND }}>cahaya esok hari.</span>
           </h2>
           <p className="mt-5 text-slate-600">
@@ -364,7 +364,7 @@ function CQDonasi() {
           </p>
           <div className="mt-8 grid grid-cols-3 gap-3">
             {["Rp 50K", "Rp 100K", "Rp 250K"].map((v) => (
-              <button key={v} className="rounded-2xl border-2 border-slate-200 py-3 text-sm font-bold text-[#0a3a4a] transition hover:border-[#0aa6b8] hover:bg-[#0aa6b8] hover:text-white">
+              <button key={v} className="rounded-2xl border-2 border-slate-200 py-3 text-sm font-bold text-[#430736] transition hover:border-[#761a57] hover:bg-[#761a57] hover:text-white">
                 {v}
               </button>
             ))}
@@ -419,7 +419,7 @@ function CQUpdate() {
             <span className="inline-block rounded-full px-4 py-1 text-xs font-bold uppercase tracking-widest" style={{ background: `${BRAND}1a`, color: BRAND_DARK }}>
               Update Terbaru
             </span>
-            <h2 className="mt-4 text-4xl font-extrabold text-[#0a3a4a] md:text-5xl">Kabar dari Lapangan</h2>
+            <h2 className="mt-4 text-4xl font-extrabold text-[#430736] md:text-5xl">Kabar dari Lapangan</h2>
           </div>
         </div>
         <div className="mt-10 grid gap-6 md:grid-cols-3">
@@ -433,7 +433,7 @@ function CQUpdate() {
                   <span className="rounded-full px-3 py-1 font-bold" style={{ background: `${BRAND}1a`, color: BRAND_DARK }}>{p.tag}</span>
                   <span className="text-slate-400">{p.d}</span>
                 </div>
-                <h3 className="mt-3 font-bold leading-snug text-[#0a3a4a]">{p.t}</h3>
+                <h3 className="mt-3 font-bold leading-snug text-[#430736]">{p.t}</h3>
                 <a href="#" className="mt-4 inline-flex items-center gap-1 text-sm font-bold" style={{ color: BRAND }}>
                   Selengkapnya <ArrowRight className="h-3.5 w-3.5" />
                 </a>
@@ -464,7 +464,7 @@ function CQFooter() {
         <div>
           <div className="text-sm font-bold uppercase tracking-widest" style={{ color: ACCENT }}>Halaman</div>
           <ul className="mt-5 space-y-2 text-sm text-white/80">
-            {NAV.map((n) => (<li key={n.label}><a href={n.href} className="hover:text-[#b6d63a]">{n.label}</a></li>))}
+            {NAV.map((n) => (<li key={n.label}><a href={n.href} className="hover:text-[#df7224]">{n.label}</a></li>))}
           </ul>
         </div>
         <div>
@@ -479,7 +479,7 @@ function CQFooter() {
           <div className="text-sm font-bold uppercase tracking-widest" style={{ color: ACCENT }}>Ikuti Kami</div>
           <div className="mt-5 flex gap-3">
             {[Instagram, Facebook, Youtube, Music2].map((Ic, i) => (
-              <a key={i} href="#" className="grid h-10 w-10 place-items-center rounded-full bg-white/10 transition hover:bg-[#b6d63a] hover:text-[#0a3a4a]">
+              <a key={i} href="#" className="grid h-10 w-10 place-items-center rounded-full bg-white/10 transition hover:bg-[#df7224] hover:text-[#430736]">
                 <Ic className="h-4 w-4" />
               </a>
             ))}
